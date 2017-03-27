@@ -73,3 +73,20 @@ end
 
 
 #### Write your domain model here:
+
+Customer
+has_many :reviews
+
+
+Owner
+has_many :restaurants
+
+
+Restaurant
+has_many :reviews
+belongs_to :owner
+
+
+Review
+belongs_to :customers
+belongs_to :restaurants
